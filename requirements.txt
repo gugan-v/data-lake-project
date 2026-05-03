@@ -1,0 +1,7 @@
+kafka-python
+pyspark
+boto3
+pandas
+streamlit
+apache-airflow
+pyarrow
