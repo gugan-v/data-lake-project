@@ -1,4 +1,5 @@
 # 🚀 Real-Time Data Lakehouse Pipeline with Streaming & Streamlit
+> ⚡ Built a production-style real-time data pipeline handling streaming data end-to-end.
 
 ## 📌 Overview
 This project implements a real-time data pipeline that ingests streaming data, processes it using Apache Spark, and stores it in a data lake. The processed data is visualized using an interactive Streamlit dashboard.
@@ -15,6 +16,7 @@ This project implements a real-time data pipeline that ingests streaming data, p
 ---
 
 ## 🧩 Architecture
+The pipeline processes real-time streaming data from ingestion to visualization.
 ![Architecture](docs/architecture.png)
 
 ---
@@ -116,6 +118,10 @@ airflow standalone
 
 🌐 Run Streamlit Dashboard
 streamlit run dashboard/app.py
+This dashboard provides real-time insights such as:
+- Total revenue
+- Country-wise sales
+- Success vs failed transactions
 
 🧪 Data Quality Validation
 Invalid amount check (amount ≤ 0)
@@ -127,14 +133,21 @@ Raw Layer → Stores incoming streaming data
 Processed Layer → Stores filtered & cleaned data
 
 📸 Project Workflow
-
+1_kafka_producer
 <img width="1920" height="1080" alt="1_kafka_producer" src="https://github.com/user-attachments/assets/12a79486-8d42-424d-b23d-291e369dfc2f" />
+2_spark_processing
 <img width="1920" height="1080" alt="2_spark_processing" src="https://github.com/user-attachments/assets/f99c8b9a-7b7e-4f2f-9a45-44ed842aa641" />
+3a_data_storage_bucket
 <img width="1920" height="1080" alt="3a_data_storage_bucket" src="https://github.com/user-attachments/assets/074a16ea-6053-4011-b025-5372cf9178c7" />
+3b_data_storage_files
 <img width="1920" height="1080" alt="3b_data_storage_files" src="https://github.com/user-attachments/assets/f64c4cff-25a1-4f23-afbd-d172c9350ea7" />
+4_airflow_pipeline
 <img width="1920" height="1080" alt="4_airflow_pipeline" src="https://github.com/user-attachments/assets/18aaa6a0-0cf9-4887-bdc7-cadd30b9f56d" />
+5a_streamlit_dashboard_overview
 <img width="1920" height="1080" alt="5a_streamlit_dashboard_overview" src="https://github.com/user-attachments/assets/af41c1a5-49bc-4b1d-bac5-70b7cbdcd862" />
+5b_streamlit_dashboard_barchart
 <img width="1920" height="1080" alt="5b_streamlit_dashboard_barchart" src="https://github.com/user-attachments/assets/fb2fd497-e1e8-4a7d-9377-3b85132805f3" />
+5c_streamlit_dashboard_linechart
 <img width="1920" height="1080" alt="5c_streamlit_dashboard_linechart" src="https://github.com/user-attachments/assets/0aa1d638-f227-441a-a110-81f9ec15ac93" />
 
 📈 Sample Output
@@ -142,6 +155,12 @@ Total Revenue: 12000
 India: 5000
 USA: 7000
 Success vs Failed Transactions
+
+## 📚 Key Learnings
+- Implemented real-time streaming using Kafka and Spark
+- Learned batch-level processing with foreachBatch
+- Designed scalable data lake architecture
+- Built end-to-end pipeline from ingestion to visualization
 
 🎯 Use Case
 
