@@ -51,25 +51,45 @@ This project simulates an e-commerce system that processes live order data to an
 
 data-lake-project/
 │
+
 ├── producers/ # Kafka producer scripts
+
 ├── streaming/ # Spark streaming jobs
+
 ├── data_quality/ # Data validation checks
+
 ├── dags/ # Airflow DAGs
+
 ├── dashboard/ # Streamlit app
+
 │ └── app.py
+
 │
+
 ├── docs/
+
 │ └── architecture.png
+
 │
+
 ├── screenshots/
+
 │ ├── 1_kafka_producer.png
+
 │ ├── 2_spark_processing.png
+
 │ ├── 3_data_storage.png
+
 │ ├── 4_airflow_pipeline.png
+
 │ └── 5_streamlit_dashboard.png
+
 │
+
 ├── requirements.txt
+
 ├── README.md
+
 └── .gitignore
 
 
