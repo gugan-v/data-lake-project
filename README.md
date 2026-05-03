@@ -1,5 +1,5 @@
 # 🚀 Real-Time Data Lakehouse Pipeline with Streaming & Streamlit
-> ⚡ Built a production-style real-time data pipeline handling streaming data end-to-end.
+> ⚡ Built a production-style real-time data pipeline handling streaming data end-to-end with Kafka, Spark, and AWS.
 
 ## 📌 Overview
 This project implements a real-time data pipeline that ingests streaming data, processes it using Apache Spark, and stores it in a data lake. The processed data is visualized using an interactive Streamlit dashboard.
@@ -118,10 +118,11 @@ airflow standalone
 
 🌐 Run Streamlit Dashboard
 streamlit run dashboard/app.py
-This dashboard provides real-time insights such as:
-- Total revenue
-- Country-wise sales
+This dashboard provides real-time analytics including:
+- Total revenue tracking
+- Country-wise sales distribution
 - Success vs failed transactions
+- Interactive filtering for better insights
 
 🧪 Data Quality Validation
 Invalid amount check (amount ≤ 0)
@@ -157,8 +158,10 @@ USA: 7000
 Success vs Failed Transactions
 
 ## 📚 Key Learnings
-- Implemented real-time streaming using Kafka and Spark
-- Learned batch-level processing with foreachBatch
+- Built real-time streaming pipelines using Kafka and Spark Structured Streaming
+- Implemented batch-level processing using foreachBatch
+- Designed scalable data lake architecture
+- Developed end-to-end pipeline from ingestion to visualization
 - Designed scalable data lake architecture
 - Built end-to-end pipeline from ingestion to visualization
 
